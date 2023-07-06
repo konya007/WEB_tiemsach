@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position: relative;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        body h1{
+            text-align: center;
+            width: 100vw; 
+            height: fit-content;    
+        }
+        body div{          
+            position: absolute;
+            border: 2px solid #000;
+            width: 200px;
+            padding: 30px;
+            font-size: 1.8rem;
+            text-align: center;
+            transition: all .2s;
+            cursor: pointer;
+        }
+        
+        body div:nth-child(2) {
+            top: 200px;
+            left: calc(50% - 300px);
+        }
+        body div:nth-child(3) {
+            top: 200px;
+            right:calc(50% - 300px);
+            z-index: 999;
+
+        }
+        body div:nth-child(3):hover{
+            background-color: red;
+        }
+        body div:nth-child(2):hover{
+            background-color: rgb(255, 0, 212);
+        }
+    </style>
+</head>
+<body>
+    <h1>Bạn có yêu tao không?</h1>
+    <div id="ok">Có</div>
+    <div id="ko">Đéo</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $("#ok").click(()=>{
+            alert("Có cái ditmemay! ahaha")
+        })
+        $("#ko").mouseover(() => { 
+            $("#ko").css({
+                left: `${($(window).width()-250)*Math.random()}px`,
+                top: `${($(window).height()-100)*Math.random()}px`
+            })
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+.mid .sample-box{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: start;
+    background-color: aliceblue;
+}
+
+.sample-box .preview-box{
+    width: 40%;
+    height: fit-content;
+}
+
+.preview-box img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.sample-box .basic-info{
+    width: 60%;
+    padding: 1rem 2rem;
+}
+
+.basic-info h2{
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
+
+.basic-info .box-info2 {
+    padding-right: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box-info2 p{
+    width: 50%;
+    padding: .2rem 0;
+}
+
+.basic-info .rate{
+    color: rgb(255, 196, 0);
+}
+
+.basic-info .price{
+    font-size: 2rem;
+    color: brown;
+    margin: 1rem 0;
+}
+
+.basic-info .box-info p{
+    margin: .5rem 0;
+}
+
+.basic-info .quatity{
+    display: flex;
+    border: 1px solid #000;
+    width: fit-content;
+    border-radius:.4rem;
+    overflow: hidden;
+}
+
+.basic-info .quatity-box{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.quatity-box span{
+    font-size: 1.4rem;
+}
+
+.quatity span{
+    text-align: center;
+    aspect-ratio: 1;
+    width: 2rem;
+}
+
+.quatity button{
+    font-size: 1.4rem;
+    aspect-ratio: 1;
+    width: 2rem;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.basic-info .buy-box{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 3rem auto;
+}
+
+.basic-info .buy-box div{
+    cursor: pointer;
+    text-align: center;
+    padding: .8rem;
+    width: 250px;
+    border-radius: .8rem;
+    border: 2px solid #820000;
+    font-size: 1.2rem;
+    color: #820000;
+    background-color: rgb(255, 255, 255);
+}
+
+.basic-info div.shopping-now{
+    color: #fff;
+    background-color: #900000;
+}
+/*  */
+
+.more-detail-box{
+    margin-top: 1rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.more-detail-box ul{
+    list-style: none;
+    display: inline-block;
+
+}
+
+.more-detail-box ul>li{
+    margin: .4rem;
+}
+
+.more-detail-box ul:nth-child(1) {
+    width: 20%;
+    min-width: 200px;
+    color: #5c5c5c;
+}
+
+.more-detail-box > div{
+    display: flex;
+}
+
+.mid h1 {
+    text-align: center;
+    margin: 1rem auto;
+}
