@@ -12,7 +12,7 @@ $(document).ready(async()=>{
     let t=""
     for (let i=0;i<5;i++) {
         t+=`<div class="stack-item">
-        <a href="/chitiet.html?type=novel&id=${i}">
+        <a href="/tiemsach/chitiet.html?type=novel&id=${i}">
         <div class="stack-img">
             <img src="${data["lightNovel"][i]["anhBiaSach"]}" alt="" srcset="">
         </div>
