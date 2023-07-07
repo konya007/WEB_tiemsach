@@ -1,0 +1,111 @@
+
+.sample-box .preview-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.preview-box img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.sample-box .basic-info{
+    width: 100%;
+    padding: 0;
+    padding-left: 1rem;
+}
+
+
+.basic-info h2{
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.basic-info .box-info2 {
+    padding-right: 0;
+}
+
+.box-info2 p{
+    width: 100%;
+    margin: .2rem 0;
+    padding: 0;
+}
+
+.pop-bot-bar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 4rem;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.basic-info .quatity-box{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    border-right: 1px solid #000;
+    padding: 0;
+    height: 100%;
+}
+
+.basic-info .quatity{
+    width: 100%;
+    display: flex;
+    border: none;
+    flex-shrink: 0;
+    border-radius:.4rem;
+    overflow: hidden;
+}
+
+.quatity-box span{
+    display: none;
+}
+
+
+.basic-info .buy-box{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin:0;
+}
+
+.basic-info .buy-box div{
+    cursor: pointer;
+    text-align: center;
+    padding: 0;
+    padding-top: 1rem;
+    width: 50%;
+    border: none;
+    border-radius: 0;
+    font-size: 1rem;
+    color: #820000;
+    background-color: rgb(255, 255, 255);
+}
+
+.basic-info .buy-box div i{
+    display: none;
+}
+
+.basic-info div.shopping-now{
+    color: #fff;
+    background-color: #900000;
+}
+
+.quatity> div{
+    width: 33%;
+}
+
+.quatity input{
+    margin-left: 0;
+}
+.quatity button{    
+    width: 33%;
+}

@@ -1,17 +1,55 @@
-async function initDetail(t,id,data) {    
-    await fetch("/tiemsach/asset/htm/detail.htm")
+
+function initDOMDetai() {
+    $("#qty-add").click((e) => { 
+        if (parseInt($("#qty-value").val())<99) {
+            $("#qty-value").val(parseInt($("#qty-value").val())+1)
+        }      
+    });
+    $("#qty-sub").click((e) => { 
+        if (parseInt($("#qty-value").val())>1) {
+            $("#qty-value").val(parseInt($("#qty-value").val())-1)
+        }      
+    });
+    $("#qty-value").change(()=>{
+        if ($("#qty-value").val() == "") {
+            $("#qty-value").val(1)
+        }
+        if (parseInt($("#qty-value").val())<1) {
+            $("#qty-value").val(1)
+        }else if (parseInt($("#qty-value").val())>99) {
+            $("#qty-value").val(99)
+        }
+    })
+}
+
+async function initDetail(t,id,data) { 
+    const dataQuery = data[t][id]
+    let temp = ""
+    for (let i=0;i<dataQuery["moreInfo"]["theLoai"].length;i++) {
+            if (i==dataQuery["moreInfo"]["theLoai"].length -1 ) 
+            {
+                temp+=`<span><a href="${resName}/timkiem.html?v=${dataQuery["moreInfo"]["theLoai"][i]}">${dataQuery["moreInfo"]["theLoai"][i]}. </a></span>`
+            }else{
+                temp+=`<span><a href="${resName}/timkiem.html?=${dataQuery["moreInfo"]["theLoai"][i]}">${dataQuery["moreInfo"]["theLoai"][i]}. </a></span>`
+            }
+    }
+    dataQuery.theLoai2 = temp
+    await fetch(`${resName}/asset/htm/detail.htm`)
     .then(async res => {
-        let replaceHTML =(await res.text()).replace(/\${(.*?)}/g,(match,key)=>{
-            
-            return eval(`data["${t}"][${id}]` + key) || ''
+        let replaceHTML =(await res.text()).replace(/\${(.*?)}/g,(match,key)=>{            
+            return eval('dataQuery' + key) || ''
         })
         $(".mid").html(replaceHTML + $(".mid").html())
     })
     .catch(err => console.log(err))
+
+    document.title = dataQuery["ten"]
+
+    initDOMDetai()
 }
 
 $(document).ready(async()=>{
-    let data = await fetch("/tiemsach/data.json").then(res => res.json()).catch(err => console.log("Lỗi\n"+err))
+    let data = await fetch(`${resName}/data.json`).then(res => res.json()).catch(err => console.log("Lỗi\n"+err))
 
     const urlQuery = new URLSearchParams(window.location.search)
 

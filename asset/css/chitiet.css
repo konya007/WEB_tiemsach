@@ -4,16 +4,18 @@
     display: flex;
     align-items: start;
     background-color: aliceblue;
+    flex-wrap: wrap;
 }
 
 .sample-box .preview-box{
-    width: 40%;
+    width: 35%;
     height: fit-content;
 }
 
 .preview-box img {
     max-width: 100%;
     max-height: 100%;
+    width: 100%;
 }
 
 .sample-box .basic-info{
@@ -69,11 +71,24 @@
     font-size: 1.4rem;
 }
 
-.quatity span{
-    text-align: center;
+.quatity> div{
     aspect-ratio: 1;
     width: 2rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
+
+.quatity input{
+    text-align: center;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    width: 4rem;
+    height: 100%;
+}
+
 
 .quatity button{
     font-size: 1.4rem;
@@ -138,7 +153,12 @@
     display: flex;
 }
 
+.more-detail-box span>a{
+    color: rgb(0, 75, 150);
+}
+
 .mid h1 {
     text-align: center;
     margin: 1rem auto;
 }
+
