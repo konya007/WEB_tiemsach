@@ -30,7 +30,7 @@ async function initDetail(t,id,data) {
             {
                 temp+=`<span><a href="${resName}/timkiem.html?v=${dataQuery["moreInfo"]["theLoai"][i]}">${dataQuery["moreInfo"]["theLoai"][i]}. </a></span>`
             }else{
-                temp+=`<span><a href="${resName}/timkiem.html?=${dataQuery["moreInfo"]["theLoai"][i]}">${dataQuery["moreInfo"]["theLoai"][i]}. </a></span>`
+                temp+=`<span><a href="${resName}/timkiem.html?v=${dataQuery["moreInfo"]["theLoai"][i]}">${dataQuery["moreInfo"]["theLoai"][i]}. </a></span>`
             }
     }
     dataQuery.theLoai2 = temp
