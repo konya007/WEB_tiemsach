@@ -1,5 +1,5 @@
-const resName = "/bansach"
-// ================/bansach==================
+const resName = "/tiemsach"
+// ================/tiemsach==================
 
 let data
 
