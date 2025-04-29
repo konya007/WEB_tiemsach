@@ -1,4 +1,4 @@
-const resName = "/tiemsach"
+const resName = "/WEB_tiemsach"
 // ================/tiemsach==================
 
 let data
